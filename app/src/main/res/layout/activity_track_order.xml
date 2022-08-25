@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TrackOrderActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_5sdp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/custom_track_order_product"
+                tools:itemCount="2"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_track"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/background_white"
+                android:visibility="visible">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Details :"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SUBTOTAL"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorText"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹1500"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DELIVERY CHARGE"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorText"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹80"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGreen"
+                        android:gravity="right"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COUPON DISCOUNT"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorText"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹50"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorRed"
+                        android:gravity="right"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"/>
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹1580"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorBlack"
+                        android:gravity="right"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOWNLOAD INVOICE"
+                android:background="@drawable/background_white"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_10sdp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

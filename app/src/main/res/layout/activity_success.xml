@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.SuccessActivity">
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_continue"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="9dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <com.cunoraz.gifview.library.GifView
+            android:id="@+id/gif"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            custom:gif="@drawable/check_circle"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Successfully!"
+            android:layout_below="@+id/animation_view"
+            android:gravity="center"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorRed"
+            android:fontFamily="@font/ubuntu_regular"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment is successfully processed and your Order is on the way."
+            android:layout_below="@+id/animation_view"
+            android:gravity="center"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Details"
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Order # is : 6589225"
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="An email receipt including the details about your order has been sent to your email ID."
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This order will be shipped to:"
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3501 Delhi, \nEast Elmhurst Delhi, \nDelhi 71452"
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash On Delivery"
+            android:layout_below="@+id/animation_view"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:scaleType="centerCrop"
+        app:lottie_rawRes="@raw/success"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your order wes placed \n successfully"
+        android:layout_below="@+id/animation_view"
+        android:gravity="center"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ubuntu_regular"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorBlack"
+        android:text="continue shopping"
+        android:fontFamily="@font/ubuntu_regular"
+        android:background="@drawable/edit_box"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"/>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+package com.example.ecommerce.Activity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import com.airbnb.lottie.LottieAnimationView;
+import com.example.ecommerce.R;
+import com.example.ecommerce.databinding.ActivitySuccessBinding;
+
+public class SuccessActivity extends AppCompatActivity {
+
+    LottieAnimationView animation_view;
+    ActivitySuccessBinding binding;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivitySuccessBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(SuccessActivity.this,MainActivity.class));
+                finishAffinity();
+            }
+        });
+    }
+}

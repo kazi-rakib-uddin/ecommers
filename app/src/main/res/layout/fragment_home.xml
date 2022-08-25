@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.HomeFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_navigation"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@color/colorWhite">
+
+
+            <TextView
+                android:id="@+id/txt_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:hint="Search for Products and More"
+                android:drawableLeft="@drawable/img_search"
+                android:background="@drawable/round_textview"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="4"
+                tools:listitem="@layout/catagory_item"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_5sdp">
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/imageSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_120sdp"
+                            app:sliderAnimationDuration="600"
+                            app:sliderAutoCycleDirection="back_and_forth"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderIndicatorAnimationDuration="600"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMargin="15dp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="2dp"
+                            app:sliderIndicatorRadius="2dp"
+                            app:sliderIndicatorSelectedColor="#5A5A5A"
+                            app:sliderIndicatorUnselectedColor="#FFF"
+                            app:sliderScrollTimeInSec="1"
+                            app:sliderStartAutoCycle="true" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Top Brand"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/view_more_top_brand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View More"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_top_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        tools:listitem="@layout/custom_top_brand"
+                        tools:itemCount="4"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Fashion"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/view_more_fashion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View More"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_new_faction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        tools:listitem="@layout/custom_new_fashion"
+                        tools:itemCount="4"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        tools:listitem="@layout/custom_banner"
+                        tools:itemCount="4"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Great Sale"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/view_more_great_sale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View More"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_great_sale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        tools:listitem="@layout/custom_top_brand"
+                        tools:itemCount="4"
+                        app:spanCount="2"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_5sdp">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/img_banner"
+                        android:scaleType="fitXY"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="realme x7 Max 5G"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dimensity 1200 5G | 120Hz Super AMOLED"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:visibility="gone"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Get it From ₹18000"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:layout_weight="1"/>
+
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="₹18990"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_15ssp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Mobile"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/view_more_new_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View More"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_new_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        tools:listitem="@layout/custom_top_brand"
+                        tools:itemCount="4"
+                        app:spanCount="2"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

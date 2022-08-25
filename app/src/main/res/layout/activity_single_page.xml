@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SinglePageActivity">
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_lin">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_10sdp">
+
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/rv_image_slide"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                >
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/view_similiar"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/img_view_similiar"
+                        android:background="@drawable/round_wishlish"
+                        android:padding="@dimen/_6sdp"
+                        android:layout_gravity="center"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/round_image_count"
+            android:padding="@dimen/_5sdp"
+            >
+
+            <TextView
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01 / 05"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@color/colorWhite"
+                />
+
+
+        </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Apple iPhone 11"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ubuntu_medium"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/img_wishlist"
+                android:background="@drawable/round_wishlish"
+                android:padding="@dimen/_8sdp"
+                android:layout_gravity="center"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/img_share"
+                android:background="@drawable/round_wishlish"
+                android:padding="@dimen/_8sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_7sdp"
+                />
+
+
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3 GB Ram 32 GB "
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorText"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_weight="1"
+
+            />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_white"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_6sdp"
+                        android:layout_gravity="center"
+                        android:text="3.6"
+                        android:textColor="@color/colorBlack"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:textSize="@dimen/_10ssp"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/star"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:padding="@dimen/_2sdp"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_2sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹3500 Off"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/round_extra_off"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="@dimen/_10ssp"/>
+
+
+            <TextView
+                android:id="@+id/txt_barganing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bargaining"
+                android:padding="@dimen/_8sdp"
+                android:background="@drawable/round_emi"
+                android:textColor="@color/colorRed"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginLeft="@dimen/_15ssp"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹39000"
+                android:textSize="@dimen/_18ssp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ubuntu_regular"/>
+
+
+            <TextView
+                android:id="@+id/txt_disc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹39000"
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@color/colorText"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginLeft="@dimen/_10sdp"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="53% Off"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/colorRed"
+                android:fontFamily="@font/ubuntu_regular"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="right"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRODUCT DESCRIPTION"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A mobile phone, cellular phone, cell phone, cellphone, handphone, or hand phone, sometimes shortened to simply mobile, cell or just phone, is a portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area
+            hand phone, sometimes shortened to simply mobile, cell or just phone, is a portable telephone that can make and receive calls over a radio."
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RELATED PRODUCTS"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            tools:listitem="@layout/custom_top_brand"
+            tools:itemCount="4"/>
+
+
+
+
+    </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:text="add to cart"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/_10ssp"
+            android:background="@drawable/round_add_to_cart"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/ubuntu_regular"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:text="buy now"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:background="@drawable/round_buy_now"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/ubuntu_regular"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

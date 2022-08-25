@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/img_home"
+        android:title="Home"
+        android:iconTint="@color/colorBlack"
+        />
+    <item
+        android:id="@+id/category"
+        android:icon="@drawable/img_category"
+        android:title="Category"
+        android:iconTint="@color/colorBlack"/>
+
+
+    <item
+        android:id="@+id/placeholder"
+        android:title=""
+        android:enabled="false"
+        />
+
+
+    <item
+        android:id="@+id/deal_of_day"
+        android:icon="@drawable/img_wishlist"
+        android:title="Wishlist"
+
+        />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/img_person"
+        android:title="Profile"
+        android:iconTint="@color/colorBlack"/>
+
+</menu>

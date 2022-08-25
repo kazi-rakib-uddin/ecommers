@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ecommerce">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:label="Notification" />
+        <activity
+            android:name=".Activity.TrackOrderActivity"
+            android:label="Track Order" />
+        <activity
+            android:name=".Activity.DealOfDayActivity"
+            android:label="Deal Of Day" />
+        <activity
+            android:name=".Activity.WishlistActivity"
+            android:label="Your Wishlist" />
+        <activity
+            android:name=".Activity.AllCategoryActivity"
+            android:label="All Category" />
+        <activity
+            android:name=".Activity.OrderActivity"
+            android:label="Order History" />
+        <activity
+            android:name=".Activity.AddressActivity"
+            android:label="My Address" />
+        <activity
+            android:name=".Activity.AddAddressActivity"
+            android:label="Add Address"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activity.ForgetPasswordActivity"
+            android:theme="@style/NotificationBarColor" />
+        <activity
+            android:name=".Activity.PaymentActivity"
+            android:label="Payment" />
+        <activity
+            android:name=".Activity.SuccessActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.AccountActivity"
+            android:label="Profile" />
+        <activity
+            android:name=".Activity.CheckOutActivity"
+            android:label="Check Out" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:label="Cart" />
+        <activity
+            android:name=".Activity.SubCategoryActivity"
+            android:label="Mobile Phone" />
+        <activity android:name=".Activity.ViewMoreActivity" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.SinglePageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:theme="@style/NotificationBarColor"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:theme="@style/NotificationBarColor"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
